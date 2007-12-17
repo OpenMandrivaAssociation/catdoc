@@ -18,7 +18,6 @@ Patch5: catdoc-0.93.4-cmd-end-of-line-ends-paragraph.patch
 License: GPL
 Group: Office
 URL: http://www.45.free.net/~vitus/ice/catdoc/
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: glibc-i18ndata
 Requires: tk
 

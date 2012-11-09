@@ -1,0 +1,22 @@
+--- catdoc-0.93.4/src/substmap.c.pix	2003-11-14 15:32:39.000000000 +0100
++++ catdoc-0.93.4/src/substmap.c	2004-11-18 11:54:16.824874738 +0100
+@@ -55,8 +55,6 @@
+ 		perror("catdoc");
+ 		return NULL;
+ 	}
+-	if (input_buffer)
+-		setvbuf(f,input_buffer,_IOFBF,FILE_BUFFER);
+ 
+ 	while (!feof(f)) {
+ 		if (!fgets(line,1024,f)) continue;
+--- catdoc-0.93.4/src/charsets.c.pix	2004-09-28 13:42:09.000000000 +0200
++++ catdoc-0.93.4/src/charsets.c	2004-11-18 11:54:20.562919779 +0100
+@@ -85,8 +85,6 @@
+ 		perror(path); 
+ 		return NULL;
+ 	}
+-	if (input_buffer)
+-		setvbuf(f,input_buffer,_IOFBF,FILE_BUFFER);
+ 	/* defaults */
+ 	for (c=0;c<32;c++) {
+ 		new[c]=c;

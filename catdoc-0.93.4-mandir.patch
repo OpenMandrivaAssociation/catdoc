@@ -1,0 +1,12 @@
+diff -p -up catdoc-0.94.2/doc/Makefile.in.mandir catdoc-0.94.2/doc/Makefile.in
+--- catdoc-0.94.2/doc/Makefile.in.mandir	2009-05-22 00:31:20.000000000 -0300
++++ catdoc-0.94.2/doc/Makefile.in	2009-05-22 00:31:26.000000000 -0300
+@@ -10,7 +10,7 @@ prefix = @prefix@
+ exec_prefix = @exec_prefix@
+ bindir = @bindir@
+ libdir = @libdir@
+-mandir = @man1dir@
++mandir = @mandir@/man1/
+ manext = @manext@ 
+ %.txt: %.1
+ 	nroff -mandoc $< |col -bx >$@

@@ -1,6 +1,6 @@
 %define name catdoc
 %define version 0.94.2
-%define release %mkrel 1
+%define release 2
 
 Summary: Converts MS-Word file to text
 Name: %{name}

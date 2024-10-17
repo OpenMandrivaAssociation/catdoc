@@ -14,7 +14,7 @@ Patch1: catdoc-0.93.4-setvbuf-is-dangerous.patch
 Patch2: catdoc-0.93.4-cmd-end-of-line-ends-paragraph.patch
 License: GPL
 Group: Office
-URL: http://vitus.wagner.pp.ru/software/catdoc/
+URL: https://vitus.wagner.pp.ru/software/catdoc/
 BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: glibc-i18ndata
 Requires: tk

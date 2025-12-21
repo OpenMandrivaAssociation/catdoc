@@ -16,6 +16,11 @@ License: GPL
 Group: Office
 URL: https://vitus.wagner.pp.ru/software/catdoc/
 BuildRoot: %{_tmppath}/%{name}-buildroot
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: glibc-i18ndata
 Requires: tk
 

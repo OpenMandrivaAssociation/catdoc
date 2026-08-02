@@ -1,6 +1,8 @@
---- catdoc-0.93.4/src/rtfread.c.pix	2004-12-06 10:33:25.000000000 +0100
-+++ catdoc-0.93.4/src/rtfread.c	2004-12-06 10:34:02.189999040 +0100
-@@ -213,7 +213,7 @@
+diff --git a/src/rtfread.c b/src/rtfread.c
+index 86a57fb..e15e9bb 100644
+--- a/src/rtfread.c
++++ b/src/rtfread.c
+@@ -219,7 +219,7 @@ int parse_rtf(FILE *f) {
  /* 				com.name, com.numarg); */
  				if (com.numarg == '*' && data_skip_mode == 0) {
  					data_skip_mode=group_count;

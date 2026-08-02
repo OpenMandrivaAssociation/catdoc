@@ -1,7 +1,22 @@
---- catdoc-0.93.4/src/substmap.c.pix	2003-11-14 15:32:39.000000000 +0100
-+++ catdoc-0.93.4/src/substmap.c	2004-11-18 11:54:16.824874738 +0100
-@@ -55,8 +55,6 @@
- 		perror("catdoc");
+diff --git a/src/charsets.c b/src/charsets.c
+index e64e24c..d1cdc2f 100644
+--- a/src/charsets.c
++++ b/src/charsets.c
+@@ -87,8 +87,6 @@ uint16_t * read_charset(const char *filename) {
+ 		perror(path); 
+ 		return NULL;
+ 	}
+-	if (input_buffer)
+-		setvbuf(f,input_buffer,_IOFBF,FILE_BUFFER);
+ 	/* defaults */
+ 	new = calloc(sizeof(short int),256);
+ 	for (c=0;c<32;c++) {
+diff --git a/src/substmap.c b/src/substmap.c
+index fcd8ead..74f53ee 100644
+--- a/src/substmap.c
++++ b/src/substmap.c
+@@ -55,8 +55,6 @@ SUBSTMAP read_substmap(char* filename) {
+ 		free(map);
  		return NULL;
  	}
 -	if (input_buffer)
@@ -9,14 +24,3 @@
  
  	while (!feof(f)) {
  		if (!fgets(line,1024,f)) continue;
---- catdoc-0.93.4/src/charsets.c.pix	2004-09-28 13:42:09.000000000 +0200
-+++ catdoc-0.93.4/src/charsets.c	2004-11-18 11:54:20.562919779 +0100
-@@ -85,8 +85,6 @@
- 		perror(path); 
- 		return NULL;
- 	}
--	if (input_buffer)
--		setvbuf(f,input_buffer,_IOFBF,FILE_BUFFER);
- 	/* defaults */
- 	for (c=0;c<32;c++) {
- 		new[c]=c;

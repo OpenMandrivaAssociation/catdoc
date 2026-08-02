@@ -1,5 +1,5 @@
 %define name catdoc
-%define version 0.94.2
+%define version 0.95
 %define release 2
 
 Summary: Converts MS-Word file to text
@@ -36,11 +36,10 @@ user-definable output formats and support
 for Word97 files, which contain UNICODE internally.
 
 %prep
-
 %setup -q
-%patch0 -p1
-%patch1 -p1
-%patch2 -p1
+%patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
 
 %build
 %configure2_5x --with-install-root="$RPM_BUILD_ROOT" --with-input=cp1252 --with-output=8859-1
@@ -82,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 - kill re-definition of %%buildroot on Pixel's request
 
 
-* Wed Jul 20 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.94-1mdk
+* Wed Jul 20 2005 Nicolas Lï¿½cureuil <neoclust@mandriva.org> 0.94-1mdk
 - New release 0.94
 - Drop Patches 1, 3
 
@@ -158,6 +157,6 @@ rm -rf $RPM_BUILD_ROOT
 - fix group
 - fix files section
 
-* Mon Sep 06 1999 Giuseppe Ghibò <ghibo@linux-mandrake.com>
+* Mon Sep 06 1999 Giuseppe Ghibï¿½ <ghibo@linux-mandrake.com>
 - First spec file for Mandrake distribution.
 

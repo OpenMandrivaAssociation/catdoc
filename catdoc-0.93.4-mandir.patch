@@ -1,12 +1,28 @@
-diff -p -up catdoc-0.94.2/doc/Makefile.in.mandir catdoc-0.94.2/doc/Makefile.in
---- catdoc-0.94.2/doc/Makefile.in.mandir	2009-05-22 00:31:20.000000000 -0300
-+++ catdoc-0.94.2/doc/Makefile.in	2009-05-22 00:31:26.000000000 -0300
+--- catdoc-0.95/doc/Makefile.in.mandir
++++ catdoc-0.95/doc/Makefile.in
 @@ -10,7 +10,7 @@ prefix = @prefix@
  exec_prefix = @exec_prefix@
  bindir = @bindir@
  libdir = @libdir@
--mandir = @man1dir@
+-mandir = @mandir@
 +mandir = @mandir@/man1/
  manext = @manext@ 
- %.txt: %.1
- 	nroff -mandoc $< |col -bx >$@
+ datadir = @datadir@
+ datarootdir = @datarootdir@
+@@ -31,12 +31,12 @@ clean:
+ install: @installtargets@
+ install-catdoc: catdoc.1 xls2csv.1 catppt.1
+ 	../mkinstalldirs $(installroot)$(mandir)
+-	$(INSTALL) -m 644 catdoc.1 $(installroot)$(mandir)/man1/catdoc.1
+-	$(INSTALL) -m 644 xls2csv.1 $(installroot)$(mandir)/man1/xls2csv.1
+-	$(INSTALL) -m 644 catppt.1 $(installroot)$(mandir)/man1/catppt.1
++	$(INSTALL) -m 644 catdoc.1 $(installroot)$(mandir)/catdoc.1
++	$(INSTALL) -m 644 xls2csv.1 $(installroot)$(mandir)/xls2csv.1
++	$(INSTALL) -m 644 catppt.1 $(installroot)$(mandir)/catppt.1
+ install-wordview:	
+ 	../mkinstalldirs $(installroot)$(mandir)
+-	$(INSTALL) -m 644 wordview.1 $(installroot)$(mandir)/man1/wordview.1
++	$(INSTALL) -m 644 wordview.1 $(installroot)$(mandir)/wordview.1
+ distclean: clean
+ 	$(RM)  Makefile catdoc.1 xls2csv.1 catppt.1 wordview.1
+ 
